@@ -19,7 +19,8 @@ jobs:
         java-version: '17'
 
     - name: Build JAR with Maven
-      run: ./mvnw package -DskipTests
+      run: mvn clean package -DskipTests
+
 
     - name: Set up Docker
       uses: docker/setup-buildx-action@v2
